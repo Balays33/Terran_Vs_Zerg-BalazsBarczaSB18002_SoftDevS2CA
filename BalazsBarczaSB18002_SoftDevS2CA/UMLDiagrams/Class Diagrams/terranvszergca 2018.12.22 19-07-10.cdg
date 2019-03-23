@@ -1,0 +1,489 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="terranvszergca">
+  <ClassDiagramComponents>
+    <Class name="Fight" package="terranvszergca" visibility="public" xPosition="20.0" yPosition="20.0">
+      <Fields>
+        <Field name="heroCharacterF" type="int" visibility="private"/>
+        <Field name="magicCounter" type="int" visibility="private"/>
+        <Field name="defend" type="int" visibility="private"/>
+        <Field name="howManyFightDone" type="int" visibility="private"/>
+        <Field name="r" type="Random" visibility="package"/>
+        <Field name="attachChoose" type="int" visibility="private"/>
+        <Field name="win" type="int" visibility="private"/>
+        <Field name="dice" type="int" visibility="private"/>
+        <Field name="dice2" type="int" visibility="private"/>
+        <Field name="myHERO" type="Race" visibility="package"/>
+        <Field name="m1" type="Marine" visibility="package"/>
+        <Field name="r1" type="Reaper" visibility="package"/>
+        <Field name="g1" type="Ghost" visibility="package"/>
+        <Field name="h1" type="Hydralisk" visibility="package"/>
+        <Field name="z1" type="Zergling" visibility="package"/>
+        <Field name="q1" type="Queen" visibility="package"/>
+        <Field name="k1" type="Kerrigan" visibility="package"/>
+        <Field name="t1" type="TychusFindlay" visibility="package"/>
+        <Field name="a" type="Race[]" visibility="package"/>
+        <Field name="enemy" type="int" visibility="private"/>
+        <Field name="chaCh" type="int" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="int" name="heroCharacter"/>
+          <Argument type="Race" name="myHERO"/>
+          <Argument type="Marine" name="m1"/>
+          <Argument type="Reaper" name="r1"/>
+          <Argument type="Ghost" name="g1"/>
+          <Argument type="Hydralisk" name="h1"/>
+          <Argument type="Zergling" name="z1"/>
+          <Argument type="Queen" name="q1"/>
+          <Argument type="Kerrigan" name="k1"/>
+          <Argument type="TychusFindlay" name="t1"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="setupplayer" returnType="void" visibility="public"/>
+        <Method name="kiir" returnType="void" visibility="public"/>
+        <Method name="fightWithEnemy" returnType="void" visibility="public"/>
+        <Method name="fightMainBoss" returnType="void" visibility="public"/>
+        <Method name="attack" returnType="void" visibility="private"/>
+        <Method name="defend" returnType="void" visibility="private"/>
+        <Method name="magic" returnType="void" visibility="private"/>
+        <Method name="charactercChangeMethod" returnType="void" visibility="private"/>
+        <Method name="test" returnType="void" visibility="public">
+          <Argument type="Marine" name="m1"/>
+          <Argument type="Hydralisk" name="h1"/>
+        </Method>
+        <Method name="getWin" returnType="int" visibility="public"/>
+        <Method name="setWin" returnType="void" visibility="public">
+          <Argument type="int" name="win"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="GameCharacters" package="terranvszergca" visibility="public" xPosition="320.0" yPosition="20.0">
+      <Fields>
+        <Field name="playername" type="String" visibility="private"/>
+        <Field name="choosecharacterRace" type="int" visibility="public"/>
+        <Field name="heroCharacter" type="int" visibility="private"/>
+        <Field name="choosecharacterTest" type="boolean" visibility="private"/>
+        <Field name="r" type="Random" visibility="package"/>
+        <Field name="m1" type="Marine" visibility="package"/>
+        <Field name="r1" type="Reaper" visibility="package"/>
+        <Field name="g1" type="Ghost" visibility="package"/>
+        <Field name="h1" type="Hydralisk" visibility="package"/>
+        <Field name="z1" type="Zergling" visibility="package"/>
+        <Field name="q1" type="Queen" visibility="package"/>
+        <Field name="k1" type="Kerrigan" visibility="package"/>
+        <Field name="t1" type="TychusFindlay" visibility="package"/>
+        <Field name="a" type="Race[]" visibility="package"/>
+        <Field name="myHERO" type="Race" visibility="package"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="getname" returnType="void" visibility="public"/>
+        <Method name="choosecharacterMethod" returnType="void" visibility="public"/>
+        <Method name="setupplayer" returnType="void" visibility="public"/>
+        <Method name="chooseHERO" returnType="void" visibility="public"/>
+        <Method name="setBackCharacter" returnType="void" visibility="public"/>
+        <Method name="getPlayername" returnType="String" visibility="public"/>
+        <Method name="setPlayername" returnType="void" visibility="public">
+          <Argument type="String" name="playername"/>
+        </Method>
+        <Method name="getChoosecharacterRace" returnType="int" visibility="public"/>
+        <Method name="setChoosecharacterRace" returnType="void" visibility="public">
+          <Argument type="int" name="choosecharacterRace"/>
+        </Method>
+        <Method name="getHeroCharacter" returnType="int" visibility="public"/>
+        <Method name="setHeroCharacter" returnType="void" visibility="public">
+          <Argument type="int" name="heroCharacter"/>
+        </Method>
+        <Method name="getM1" returnType="Marine" visibility="public"/>
+        <Method name="setM1" returnType="void" visibility="public">
+          <Argument type="Marine" name="m1"/>
+        </Method>
+        <Method name="getH1" returnType="Hydralisk" visibility="public"/>
+        <Method name="setH1" returnType="void" visibility="public">
+          <Argument type="Hydralisk" name="h1"/>
+        </Method>
+        <Method name="getMyHERO" returnType="Race" visibility="public"/>
+        <Method name="setMyHERO" returnType="void" visibility="public">
+          <Argument type="Race" name="myHERO"/>
+        </Method>
+        <Method name="getG1" returnType="Ghost" visibility="public"/>
+        <Method name="setG1" returnType="void" visibility="public">
+          <Argument type="Ghost" name="g1"/>
+        </Method>
+        <Method name="getR1" returnType="Reaper" visibility="public"/>
+        <Method name="setR1" returnType="void" visibility="public">
+          <Argument type="Reaper" name="r1"/>
+        </Method>
+        <Method name="getZ1" returnType="Zergling" visibility="public"/>
+        <Method name="setZ1" returnType="void" visibility="public">
+          <Argument type="Zergling" name="z1"/>
+        </Method>
+        <Method name="getQ1" returnType="Queen" visibility="public"/>
+        <Method name="setQ1" returnType="void" visibility="public">
+          <Argument type="Queen" name="q1"/>
+        </Method>
+        <Method name="getK1" returnType="Kerrigan" visibility="public"/>
+        <Method name="setK1" returnType="void" visibility="public">
+          <Argument type="Kerrigan" name="k1"/>
+        </Method>
+        <Method name="getT1" returnType="TychusFindlay" visibility="public"/>
+        <Method name="setT1" returnType="void" visibility="public">
+          <Argument type="TychusFindlay" name="t1"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Ghost" package="terranvszergca" visibility="public" xPosition="620.0" yPosition="20.0">
+      <Fields/>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="String" name="name"/>
+          <Argument type="int" name="level"/>
+        </Constructor>
+      </Constructors>
+      <Methods/>
+    </Class>
+    <Class name="Hydralisk" package="terranvszergca" visibility="public" xPosition="920.0" yPosition="20.0">
+      <Fields/>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="String" name="name"/>
+          <Argument type="int" name="level"/>
+        </Constructor>
+      </Constructors>
+      <Methods/>
+    </Class>
+    <Class name="Infopage" package="terranvszergca" visibility="public" xPosition="1220.0" yPosition="20.0">
+      <Fields>
+        <Field name="file" type="File" visibility="package"/>
+        <Field name="playername" type="String" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="saveData" returnType="void" visibility="public">
+          <Argument type="String" name="playername"/>
+        </Method>
+        <Method name="printoutDatabase" returnType="void" visibility="public"/>
+        <Method name="writeoutInfo" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Kerrigan" package="terranvszergca" visibility="public" xPosition="1520.0" yPosition="20.0">
+      <Fields/>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="String" name="name"/>
+          <Argument type="int" name="level"/>
+          <Argument type="int" name="health"/>
+          <Argument type="int" name="toughness"/>
+        </Constructor>
+      </Constructors>
+      <Methods/>
+    </Class>
+    <Class name="LogialPRO" package="terranvszergca" visibility="public" xPosition="1820.0" yPosition="20.0">
+      <Fields>
+        <Field name="r" type="Random" visibility="package"/>
+        <Field name="menunumber" type="int" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="run" returnType="void" visibility="public"/>
+        <Method name="authorname" returnType="void" visibility="private"/>
+        <Method name="menuname" returnType="void" visibility="private"/>
+      </Methods>
+    </Class>
+    <Class name="Map" package="terranvszergca" visibility="public" xPosition="2120.0" yPosition="20.0">
+      <Fields>
+        <Field name="mapArrey" type="int[][]" visibility="private"/>
+        <Field name="xmove" type="int" visibility="private"/>
+        <Field name="ymove" type="int" visibility="private"/>
+        <Field name="story" type="Story" visibility="package"/>
+        <Field name="e" type="char" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="mapHike" returnType="void" visibility="public"/>
+        <Method name="nSWE" returnType="void" visibility="private"/>
+        <Method name="mappingGame" returnType="void" visibility="public"/>
+        <Method name="getXmove" returnType="int" visibility="public"/>
+        <Method name="setXmove" returnType="void" visibility="public">
+          <Argument type="int" name="xmove"/>
+        </Method>
+        <Method name="getYmove" returnType="int" visibility="public"/>
+        <Method name="setYmove" returnType="void" visibility="public">
+          <Argument type="int" name="ymove"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Marine" package="terranvszergca" visibility="public" xPosition="20.0" yPosition="420.0">
+      <Fields/>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="String" name="name"/>
+          <Argument type="int" name="level"/>
+        </Constructor>
+      </Constructors>
+      <Methods/>
+    </Class>
+    <Class name="Queen" package="terranvszergca" visibility="public" xPosition="320.0" yPosition="420.0">
+      <Fields/>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="String" name="name"/>
+          <Argument type="int" name="level"/>
+        </Constructor>
+      </Constructors>
+      <Methods/>
+    </Class>
+    <Class name="Race" package="terranvszergca" visibility="public" isAbstract="true" xPosition="620.0" yPosition="420.0">
+      <Fields>
+        <Field name="name" type="String" visibility="private"/>
+        <Field name="health" type="int" visibility="private"/>
+        <Field name="skills" type="String[]" visibility="private"/>
+        <Field name="skillposition" type="int" visibility="private"/>
+        <Field name="skill" type="String" visibility="private"/>
+        <Field name="toughness" type="int" visibility="private"/>
+        <Field name="level" type="int" visibility="private"/>
+        <Field name="inventory" type="String[]" visibility="private"/>
+        <Field name="attackPoint" type="int" visibility="private"/>
+        <Field name="r" type="Random" visibility="package"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="String" name="name"/>
+          <Argument type="int" name="level"/>
+        </Constructor>
+        <Constructor visibility="public">
+          <Argument type="String" name="name"/>
+          <Argument type="int" name="level"/>
+          <Argument type="int" name="health"/>
+          <Argument type="int" name="toughness"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="info" returnType="void" visibility="public"/>
+        <Method name="attack" returnType="void" visibility="public"/>
+        <Method name="dead" returnType="void" visibility="public"/>
+        <Method name="setNEWhealth" returnType="void" visibility="public"/>
+        <Method name="getName" returnType="String" visibility="public"/>
+        <Method name="setName" returnType="void" visibility="public">
+          <Argument type="String" name="name"/>
+        </Method>
+        <Method name="getHealth" returnType="int" visibility="public"/>
+        <Method name="setHealth" returnType="void" visibility="public">
+          <Argument type="int" name="health"/>
+        </Method>
+        <Method name="getSkill" returnType="String" visibility="public"/>
+        <Method name="setSkill" returnType="void" visibility="public">
+          <Argument type="String" name="skill"/>
+        </Method>
+        <Method name="getToughness" returnType="int" visibility="public"/>
+        <Method name="setToughness" returnType="void" visibility="public">
+          <Argument type="int" name="toughness"/>
+        </Method>
+        <Method name="getLevel" returnType="int" visibility="public"/>
+        <Method name="setLevel" returnType="void" visibility="public">
+          <Argument type="int" name="level"/>
+        </Method>
+        <Method name="getInventory" returnType="String[]" visibility="public"/>
+        <Method name="setInventory" returnType="void" visibility="public">
+          <Argument type="String[]" name="inventory"/>
+        </Method>
+        <Method name="getAttackPoint" returnType="int" visibility="public"/>
+        <Method name="setAttackPoint" returnType="void" visibility="public">
+          <Argument type="int" name="attackPoint"/>
+        </Method>
+        <Method name="getSkillposition" returnType="int" visibility="public"/>
+        <Method name="setSkillposition" returnType="void" visibility="public">
+          <Argument type="int" name="skillposition"/>
+        </Method>
+        <Method name="getSkills" returnType="String[]" visibility="public"/>
+        <Method name="setSkills" returnType="void" visibility="public">
+          <Argument type="String[]" name="skills"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Reaper" package="terranvszergca" visibility="public" xPosition="920.0" yPosition="420.0">
+      <Fields/>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="String" name="name"/>
+          <Argument type="int" name="level"/>
+        </Constructor>
+      </Constructors>
+      <Methods/>
+    </Class>
+    <Class name="Story" package="terranvszergca" visibility="public" xPosition="1220.0" yPosition="420.0">
+      <Fields>
+        <Field name="xmove" type="int" visibility="private"/>
+        <Field name="ymove" type="int" visibility="private"/>
+        <Field name="stroynumber" type="int" visibility="private"/>
+        <Field name="stroyf11" type="boolean" visibility="private"/>
+        <Field name="stroyf31" type="boolean" visibility="private"/>
+        <Field name="stroyf13" type="boolean" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="int" name="Xmove"/>
+          <Argument type="int" name="Ymove"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="storyline" returnType="void" visibility="public">
+          <Argument type="int" name="Xmove"/>
+          <Argument type="int" name="Ymove"/>
+        </Method>
+        <Method name="story11" returnType="void" visibility="public"/>
+        <Method name="story12" returnType="void" visibility="public"/>
+        <Method name="story13" returnType="void" visibility="public"/>
+        <Method name="story21" returnType="void" visibility="public"/>
+        <Method name="story22" returnType="void" visibility="public"/>
+        <Method name="story23" returnType="void" visibility="public"/>
+        <Method name="story31" returnType="void" visibility="public"/>
+        <Method name="story32" returnType="void" visibility="public"/>
+        <Method name="story33" returnType="void" visibility="public"/>
+        <Method name="TerranAndZergstory" returnType="void" visibility="public"/>
+        <Method name="ZergStory" returnType="void" visibility="public"/>
+        <Method name="TerranStory" returnType="void" visibility="public"/>
+        <Method name="resetStory113113" returnType="void" visibility="public"/>
+        <Method name="getStroynumber" returnType="int" visibility="public"/>
+        <Method name="setStroynumber" returnType="void" visibility="public">
+          <Argument type="int" name="stroynumber"/>
+        </Method>
+        <Method name="isStroyf11" returnType="boolean" visibility="public"/>
+        <Method name="setStroyf11" returnType="void" visibility="public">
+          <Argument type="boolean" name="stroyf11"/>
+        </Method>
+        <Method name="isStroyf31" returnType="boolean" visibility="public"/>
+        <Method name="setStroyf31" returnType="void" visibility="public">
+          <Argument type="boolean" name="stroyf31"/>
+        </Method>
+        <Method name="isStroyf13" returnType="boolean" visibility="public"/>
+        <Method name="setStroyf13" returnType="void" visibility="public">
+          <Argument type="boolean" name="stroyf13"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Terran" package="terranvszergca" visibility="public" isAbstract="true" xPosition="1520.0" yPosition="420.0">
+      <Fields/>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="String" name="name"/>
+          <Argument type="int" name="level"/>
+        </Constructor>
+        <Constructor visibility="public">
+          <Argument type="String" name="name"/>
+          <Argument type="int" name="level"/>
+          <Argument type="int" name="health"/>
+          <Argument type="int" name="toughness"/>
+        </Constructor>
+      </Constructors>
+      <Methods/>
+    </Class>
+    <Class name="TerranVSZergCA" package="terranvszergca" visibility="public" xPosition="1820.0" yPosition="420.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String[]" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="TychusFindlay" package="terranvszergca" visibility="public" xPosition="2120.0" yPosition="420.0">
+      <Fields/>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="String" name="name"/>
+          <Argument type="int" name="level"/>
+        </Constructor>
+        <Constructor visibility="public">
+          <Argument type="String" name="name"/>
+          <Argument type="int" name="level"/>
+          <Argument type="int" name="health"/>
+          <Argument type="int" name="toughness"/>
+        </Constructor>
+      </Constructors>
+      <Methods/>
+    </Class>
+    <Class name="Zerg" package="terranvszergca" visibility="public" isAbstract="true" xPosition="20.0" yPosition="820.0">
+      <Fields/>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="String" name="name"/>
+          <Argument type="int" name="level"/>
+        </Constructor>
+        <Constructor visibility="public">
+          <Argument type="String" name="name"/>
+          <Argument type="int" name="level"/>
+          <Argument type="int" name="health"/>
+          <Argument type="int" name="toughness"/>
+        </Constructor>
+      </Constructors>
+      <Methods/>
+    </Class>
+    <Class name="Zergling" package="terranvszergca" visibility="public" xPosition="320.0" yPosition="820.0">
+      <Fields/>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="String" name="name"/>
+          <Argument type="int" name="level"/>
+        </Constructor>
+      </Constructors>
+      <Methods/>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <IsRelation name="is" source="terranvszergca.Zerg" target="terranvszergca.Race"/>
+    <UseRelation source="terranvszergca.GameCharacters" target="terranvszergca.Reaper" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <IsRelation name="is" source="terranvszergca.Marine" target="terranvszergca.Terran"/>
+    <HasRelation name="h1" source="terranvszergca.Fight" target="terranvszergca.Hydralisk" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="g1" source="terranvszergca.Fight" target="terranvszergca.Ghost" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <IsRelation name="is" source="terranvszergca.Zergling" target="terranvszergca.Zerg"/>
+    <IsRelation name="is" source="terranvszergca.Ghost" target="terranvszergca.Terran"/>
+    <HasRelation name="h1" source="terranvszergca.GameCharacters" target="terranvszergca.Hydralisk" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="terranvszergca.GameCharacters" target="terranvszergca.TychusFindlay" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="z1" source="terranvszergca.Fight" target="terranvszergca.Zergling" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="r1" source="terranvszergca.GameCharacters" target="terranvszergca.Reaper" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="k1" source="terranvszergca.GameCharacters" target="terranvszergca.Kerrigan" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="terranvszergca.GameCharacters" target="terranvszergca.Kerrigan" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <IsRelation name="is" source="terranvszergca.Reaper" target="terranvszergca.Terran"/>
+    <IsRelation name="is" source="terranvszergca.TychusFindlay" target="terranvszergca.Terran"/>
+    <HasRelation name="q1" source="terranvszergca.Fight" target="terranvszergca.Queen" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="m1" source="terranvszergca.Fight" target="terranvszergca.Marine" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="story" source="terranvszergca.Map" target="terranvszergca.Story" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="myHERO" source="terranvszergca.GameCharacters" target="terranvszergca.Race" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <IsRelation name="is" source="terranvszergca.Queen" target="terranvszergca.Terran"/>
+    <IsRelation name="is" source="terranvszergca.Hydralisk" target="terranvszergca.Zerg"/>
+    <HasRelation name="q1" source="terranvszergca.GameCharacters" target="terranvszergca.Queen" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="m1" source="terranvszergca.GameCharacters" target="terranvszergca.Marine" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="t1" source="terranvszergca.GameCharacters" target="terranvszergca.TychusFindlay" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="myHERO" source="terranvszergca.Fight" target="terranvszergca.Race" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="terranvszergca.GameCharacters" target="terranvszergca.Ghost" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="terranvszergca.GameCharacters" target="terranvszergca.Hydralisk" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="k1" source="terranvszergca.Fight" target="terranvszergca.Kerrigan" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="terranvszergca.GameCharacters" target="terranvszergca.Race" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="terranvszergca.GameCharacters" target="terranvszergca.Queen" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="g1" source="terranvszergca.GameCharacters" target="terranvszergca.Ghost" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="terranvszergca.Fight" target="terranvszergca.Marine" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <IsRelation name="is" source="terranvszergca.Terran" target="terranvszergca.Race"/>
+    <HasRelation name="z1" source="terranvszergca.GameCharacters" target="terranvszergca.Zergling" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <IsRelation name="is" source="terranvszergca.Kerrigan" target="terranvszergca.Zerg"/>
+    <HasRelation name="r1" source="terranvszergca.Fight" target="terranvszergca.Reaper" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="terranvszergca.GameCharacters" target="terranvszergca.Marine" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="t1" source="terranvszergca.Fight" target="terranvszergca.TychusFindlay" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="terranvszergca.GameCharacters" target="terranvszergca.Zergling" sourceCardinality="1..1" targetCardinality="1..1"/>
+  </ClassDiagramRelations>
+</ClassDiagram>
